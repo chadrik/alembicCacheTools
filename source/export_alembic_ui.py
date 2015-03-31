@@ -239,9 +239,7 @@ class ExportAlembicUi(form_class, base_class):
         
         if self.writeVisCheckBox.isChecked(): writeVisibility = True
         
-        setting = ExportAlembicSetting(start_frame, end_frame, writeVisibility)
-        
-        exportAlembic = ExportAlembic(setting)
+        exportAlembic = ExportAlembic(start_frame, end_frame, writeVisibility)
         
         #set path where the alembic file is saved to
         export_to_path = os.path.join(cache_dir, "{}.{}".format(file_name, ext)).replace('\\', '/')
@@ -301,9 +299,7 @@ class ExportAlembicUi(form_class, base_class):
         
         if self.writeVisCheckBox_2.isChecked(): writeVisibility = True
         
-        camera_setting = ExportAlembicSetting(start_frame, end_frame, writeVisibility)
-        
-        exportCamAlembic = ExportAlembic(camera_setting)
+        exportCamAlembic = ExportAlembic(start_frame, end_frame, writeVisibility)
         
         #set path where the camera alembic file is saved to
         camera_export_to_path = os.path.join(cache_dir, "{}.{}".format(file_name, ext)).replace('\\', '/')

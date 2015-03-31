@@ -5,6 +5,8 @@ import re
 import unicodedata
 from asset_manager import AssetManager
 
+# FIXME: not sure this needs to be a class
+
 class ImportAlembic():
     """
     ImportAlembic is class that import/bring alembic file into scene

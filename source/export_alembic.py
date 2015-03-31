@@ -4,26 +4,18 @@ import os
 import re
 import unicodedata
 from asset_manager import AssetManager
-
-
-class ExportAlembicSetting():
-    
-    def __init__(self, start, end, writeVisibility):
-        self.start = start
-        self.end = end
-        self.writeVisibility = writeVisibility
         
         
-class ExportAlembic():
+class ExportAlembic(object):
     """
     ExportAlembic is class that automatically selects all geo_grp and export them as alembic file
     """
-    def __init__(self, setting):
+    def __init__(self, start, end, writeVisibility):
         print "From ExportAlembic"
         self.assetManager = AssetManager()
-        self.start = setting.start
-        self.end = setting.end
-        self.writeVisibility = setting.writeVisibility
+        self.start = start
+        self.end = end
+        self.writeVisibility = writeVisibility
         
     def build_alembic_command(self, geo_grps, abcFilePath):
         """    
